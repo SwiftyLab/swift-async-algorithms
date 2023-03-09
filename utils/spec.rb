@@ -1,6 +1,6 @@
 require 'json'
 
-module SwiftCollections
+module AsyncAlgorithms
   module Spec
     def define(has_files = true)
       podspec_path = caller.find do |trace|
@@ -16,7 +16,7 @@ module SwiftCollections
       self.summary           = package.summary
       self.description       = package.description
       self.license           = { :type => package.license, :file => 'LICENSE.txt' }
-      self.documentation_url = "https://github.com/apple/swift-collections/tree/#{self.version}/Documentation"
+      self.documentation_url = "https://github.com/apple/swift-async-algorithms/tree/#{self.version}/Sources/AsyncAlgorithms/AsyncAlgorithms.docc/Guides"
       self.social_media_url  = package.author.url
 
       self.source            = {
@@ -28,15 +28,15 @@ module SwiftCollections
         package.author.name => package.author.email
       }
 
-      self.swift_version             = '5.0'
-      self.ios.deployment_target     = '8.0'
-      self.macos.deployment_target   = '10.9'
-      self.tvos.deployment_target    = '9.0'
-      self.watchos.deployment_target = '2.0'
-      self.osx.deployment_target     = '10.9'
+      self.swift_version             = '5.6'
+      self.ios.deployment_target     = '13.0'
+      self.macos.deployment_target   = '10.15'
+      self.tvos.deployment_target    = '13.0'
+      self.watchos.deployment_target = '6.0'
+      self.osx.deployment_target     = '10.15'
 
       if has_files
-        self.source_files = "Sources/#{self.name}/**/*.swift", "Sources/#{self.name}/*.docc"
+        self.source_files = "Sources/#{self.name}/**/*.swift", "Sources/#{self.name}/**/*.docc/*.*"
       end
     end
   end

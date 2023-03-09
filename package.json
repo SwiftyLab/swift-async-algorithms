@@ -1,9 +1,9 @@
 {
-  "name": "SwiftCollections",
-  "version": "1.0.0",
-  "summary": "Swift Collections is an open-source package of data structure implementations for the Swift programming language.",
-  "description": "Unofficial pod for the swift-collections library.",
-  "homepage": "https://github.com/apple/swift-collections",
+  "name": "AsyncAlgorithms",
+  "version": "0.1.0",
+  "summary": "Swift Async Algorithms is an open-source package of asynchronous sequence and advanced algorithms that involve concurrency, along with their related types.",
+  "description": "Unofficial pod for the swift-async-algorithms library.",
+  "homepage": "https://github.com/apple/swift-async-algorithms",
   "license": "Apache License, Version 2.0",
   "author": {
     "name": "Soumya Ranjan Mahunt",
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/apple/swift-collections.git"
+    "url": "https://github.com/apple/swift-async-algorithms.git"
   },
   "private": true,
   "dependencies": {
@@ -21,6 +21,7 @@
   },
   "scripts": {
     "prepare": "node utils/setup.js",
+    "push": "node utils/push.js",
     "pod-lint": "npm exec --package=swiftylab-ci -- pod-lint.js"
   }
 }
