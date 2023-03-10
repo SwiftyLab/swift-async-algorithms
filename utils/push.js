@@ -9,7 +9,7 @@ const core = require('@actions/core');
   'AsyncAlgorithms_XCTest.podspec',
 ].forEach((spec) => {
   core.startGroup(`Pushing ${spec} to CocoapPods trunk`);
-  execSync(`pod trunk push --allow-warnings --synchronous --skip-tests --skip-import-validation --verbose ${spec}`, {
+  execSync(`pod trunk push --allow-warnings --synchronous --skip-tests --verbose ${spec}`, {
       stdio: ['inherit', 'inherit', 'inherit'],
       encoding: 'utf-8'
     }
